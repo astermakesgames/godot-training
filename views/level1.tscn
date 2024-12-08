@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://5ce3j7w6j6d0"]
+
+[ext_resource type="PackedScene" uid="uid://dhkwv4p05lj0t" path="res://tilemaps/levels/level_1_tilemap.tscn" id="1_aciir"]
+[ext_resource type="PackedScene" uid="uid://cbm4cklxbd0mf" path="res://tilemaps/characters/PC1.tscn" id="2_cqtv6"]
+
+[node name="level_1" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="Level 1 Tilemap" parent="." instance=ExtResource("1_aciir")]
+
+[node name="PC1" parent="." instance=ExtResource("2_cqtv6")]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(48, 5)
+animation = &"walkdownright"
+frame_progress = 0.0
